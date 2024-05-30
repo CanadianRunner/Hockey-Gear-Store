@@ -1,26 +1,58 @@
-<strong>** DO NOT DISTRIBUTE OR PUBLICLY POST SOLUTIONS TO THESE LABS. MAKE ALL FORKS OF THIS REPOSITORY WITH SOLUTION CODE PRIVATE. PLEASE REFER TO THE STUDENT CODE OF CONDUCT AND ETHICAL EXPECTATIONS FOR COLLEGE OF INFORMATION TECHNOLOGY STUDENTS FOR SPECIFICS. ** </strong>
+# Seans Hockey Store
 
-# WESTERN GOVERNOR UNIVERSITY 
-## D287 – JAVA FRAMEWORKS
-Welcome to Java Frameworks! This is an opportunity for students to implement user interfaces and learn to leverage existing frameworks, assets, and content for object-oriented programming.
-FOR SPECIFIC TASK INSTRUCTIONS AND REQUIREMENTS FOR THIS ASSESSMENT, PLEASE REFER TO THE COURSE PAGE.
-## BASIC INSTRUCTIONS
-For this project, you will use the Integrated Development Environment (IDE) link in the web links section of this assessment to install the IDE, IntelliJ IDEA (Ultimate Edition). All relevant links are on the course page. Please refer to the course of study for specific links. You will sign up for a free student license using your WGU.edu email address. Please see the “IntelliJ Ultimate Edition Instructions” attachment for instructions on how do this. Next you will download the “Inventory Management Application Template Code” provided in the web links section and open it in IntelliJ IDEA (Ultimate Edition). You will upload this project to a private external GitLab repository and backup regularly. As a part of this, you have been provided with a base code (starting point). 
+This MVP website was built to provided specifications for my college course D287.
 
-## SUPPLEMENTAL RESOURCES  
-1.	How to clone a project to IntelliJ using Git?
+# _Java Frameworks_
 
-> Ensure that you have Git installed on your system and that IntelliJ is installed using [Toolbox](https://www.jetbrains.com/toolbox-app/). Make sure that you are using version 2022.3.2. Once this has been confirmed, click the clone button and use the 'IntelliJ IDEA (HTTPS)' button. This will open IntelliJ with a prompt to clone the proejct. Save it in a safe location for the directory and press clone. IntelliJ will prompt you for your credentials. Enter in your WGU Credentials and the project will be cloned onto your local machine.  
+This project was generated with [WGU GitLab Environment](https://gitlab.com/wgu-gitlab-environment/students/d287-java-frameworks/-/jobs/6984048303)
 
-2. How to create a branch and start Development?
+#### By _**Sean Keane**_
 
-- GitLab method
-> Press the '+' button located near your branch name. In the dropdown list, press the 'New branch' button. This will allow you to create a name for your branch. Once the branch has been named, you can select 'Create Branch' to push the branch to your repository.
+#### WGU Code Review 05/30/2024
 
-- IntelliJ method
-> In IntelliJ, Go to the 'Git' button on the top toolbar. Select the new branch option and create a name for the branch. Make sure checkout branch is selected and press create. You can now add a commit message and push the new branch to the local repo.
+## Technologies Used
 
-## SUPPORT
-If you need additional support, please navigate to the course page and reach out to your course instructor.
-## FUTURE USE
-Take this opportunity to create or add to a simple resume portfolio to highlight and showcase your work for future use in career search, experience, and education!
+* HTML
+* CSS
+* TypeScript
+* Angular
+
+
+## Description
+_This is a project I created for my B.S. in Software Engineering that takes an SVG of a world map and displays relevant information based on user clicks.  It is a single page application with the map centered on the page.   Clicking on a country will display the Name, Capital, Region, Income Level, Lending Type, and Coordinates.  Developing this application helped me grow my understanding of TypeScript, Angular, HTML, and CSS._
+
+
+## Setup/Installation Requirements
+
+1) Clone this repository to your desktop.
+2) Navigate to the now installed directory and open in your editor of choice.
+3) Open the directory and `cd to seans-world-map`.
+4) Run `ng serve` for a dev server.
+5) Open your browser of choice and navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## For a visual representation of a successfully built application, please consult the attached Gif.
+
+[//]: # (![BuiltApp]&#40;Working-App.gif&#41;)
+
+## Project can be found at:
+https://github.com/CanadianRunner/World-Map
+
+## Known Bugs
+
+* No known bugs.
+
+## License
+
+If you have any questions or concerns, feel free to contact me at code@sean-keane.com
+
+## SVG World Map Used:
+
+* https://en.m.wikipedia.org/wiki/File:BlankMap-World.svg
+
+## API Used for facts about each country
+
+* https://datahelpdesk.worldbank.org/knowledgebase/articles/898590-country-api-queries
+
+*This is licensed under the MIT license*
+
+Copyright (c) 05-30-2024 **_Sean Keane_**
