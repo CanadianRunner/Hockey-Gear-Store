@@ -27,6 +27,15 @@ This project was generated with [WGU GitLab Environment](https://gitlab.com/wgu-
 - **Changes Made** Updated product name, price, and inventory
 
 #### Part D Changes
+- **File** `src/main/resources/templates/mainscreen.html`
+- **Lines** 20-22
+- **Change Made** Added navigation element to the About Page
+- **File** `src/main/java/controllers/MainScreenControllerr`
+- **Lines** 56-59
+- **Change Made** Added a method to controller to handle requests to the about page
+- **File** `src/main/resources/templates/about.html`
+- **Lines** 1-19
+- **Change Made** Created the about page with information about the store
 #### Part E Changes
 #### Part F Changes
 #### Part G Changes
