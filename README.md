@@ -36,7 +36,15 @@ This project was generated with [WGU GitLab Environment](https://gitlab.com/wgu-
 - **File** `src/main/resources/templates/about.html`
 - **Lines** 1-19
 - **Change Made** Created the about page with information about the store
+
 #### Part E Changes
+- **File** `src/main/resources/applications.properties`
+- **Line** 7
+- **Change Made** Updated database name for testing purposes
+- **File** `src/main/java/com/example/demo/bootstrap/BootStrapData.java`
+- **Lines** 36-97
+- **Changes Made** Instantiated the parts and products for the hockey shop.  The name, price, inventory, and ID's were created, along with saving these items to their respective repos.
+
 #### Part F Changes
 #### Part G Changes
 #### Part H Changes
