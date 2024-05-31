@@ -10,13 +10,35 @@ This project was generated with [WGU GitLab Environment](https://gitlab.com/wgu-
 
 #### WGU Code Review 05/30/2024
 
+## Changes Made For Parts C - J
+# Need to specify the prompt, file name, line number, and change made.
+
+## Part C Changes:
+
+### Customized HTML UI for "Sean's Hockey Gear Store"
+- **File** `src/main/resources/templates/mainscreen.html`
+- **Line** 14
+- **Change Made** Updated the title tag
+- **Line** 19
+- **Change Made** Updated h1 tag
+- **Lines** 43-45
+- **Changes Made** Updated part name, price, and inventory
+- **Lines** 79-81
+- **Changes Made** Updated product name, price, and inventory
+
+#### Part D Changes
+#### Part E Changes
+#### Part F Changes
+#### Part G Changes
+#### Part H Changes
+#### Part I Changes
+#### Part J Changes
+
 ## Technologies Used
 
 * HTML
 * CSS
-* TypeScript
-* Angular
-
+* Java
 
 ## Description
 _This is a project I created for my B.S. in Software Engineering that takes an SVG of a world map and displays relevant information based on user clicks.  It is a single page application with the map centered on the page.   Clicking on a country will display the Name, Capital, Region, Income Level, Lending Type, and Coordinates.  Developing this application helped me grow my understanding of TypeScript, Angular, HTML, and CSS._
@@ -26,9 +48,8 @@ _This is a project I created for my B.S. in Software Engineering that takes an S
 
 1) Clone this repository to your desktop.
 2) Navigate to the now installed directory and open in your editor of choice.
-3) Open the directory and `cd to seans-world-map`.
-4) Run `ng serve` for a dev server.
-5) Open your browser of choice and navigate to `http://localhost:8080/mainscreen`. The application will automatically reload if you change any of the source files.
+3) Run the project by clicking the play button.  This is next to 'DemoApplication' in the top right of the IDE.
+4) Open your browser of choice and navigate to `http://localhost:8080/mainscreen`.
 
 ## Project can be found at:
 https://github.com/CanadianRunner/World-Map
