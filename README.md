@@ -28,11 +28,7 @@ _This is a project I created for my B.S. in Software Engineering that takes an S
 2) Navigate to the now installed directory and open in your editor of choice.
 3) Open the directory and `cd to seans-world-map`.
 4) Run `ng serve` for a dev server.
-5) Open your browser of choice and navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## For a visual representation of a successfully built application, please consult the attached Gif.
-
-[//]: # (![BuiltApp]&#40;Working-App.gif&#41;)
+5) Open your browser of choice and navigate to `http://localhost:8080/mainscreen`. The application will automatically reload if you change any of the source files.
 
 ## Project can be found at:
 https://github.com/CanadianRunner/World-Map
