@@ -1,5 +1,4 @@
 package com.example.demo.service;
-
 import com.example.demo.domain.InhousePart;
 import com.example.demo.domain.OutsourcedPart;
 import com.example.demo.repositories.InhousePartRepository;
@@ -10,12 +9,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-/**
- *
- *
- *
- *
- */
 @Service
 public class InhousePartServiceImpl implements InhousePartService {
     private InhousePartRepository partRepository;
