@@ -1,57 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-<html xmlns:th="https://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Part Form</title>
-
-<!--    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />-->
+    <title>Product Form</title>
 </head>
 <body>
-<h1>Product Detail</h1>
-<form action="#" th:action="@{/showFormAddProduct}" th:object="${product}" method="POST"}>
-    <!-- Add hidden form field to handle update -->
-    <p><input type="hidden" th:field="*{id}"/></p>
+<div class="container">
+    <h1>Product Detail</h1>
+    <form th:action="@{/showFormAddProduct}" th:object="${product}" method="POST">
+        <input type="hidden" th:field="*{id}" />
 
-    <p><input type="text" th:field="*{name}" placeholder="Name" class="form-control mb-4 col-4"/></p>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" th:field="*{name}" id="name" placeholder="Name" class="form-control mb-4 col-4" />
+        </div>
 
-    <p><input type="text" th:field="*{price}" placeholder= "Price" class="form-control mb-4 col-4"/></p>
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="text" th:field="*{price}" id="price" placeholder="Price" class="form-control mb-4 col-4" />
+            <p th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Price Error</p>
+        </div>
 
+        <div class="form-group">
+            <label for="inv">Inventory</label>
+            <input type="text" th:field="*{inv}" id="inv" placeholder="Inventory" class="form-control mb-4 col-4" />
+            <p th:if="${#fields.hasErrors('inv')}" th:errors="*{inv}">Inventory Error</p>
+        </div>
 
-    <p><input type="text" th:field="*{inv}" placeholder="Inventory" class="form-control mb-4 col-4"/></p>
+        <div class="form-group">
+            <label for="minInv">Minimum Inventory</label>
+            <input type="number" th:field="*{minInv}" id="minInv" placeholder="Minimum Inventory" class="form-control mb-4 col-4" />
+            <p th:if="${#fields.hasErrors('minInv')}" th:errors="*{minInv}">Minimum Inventory Error</p>
+        </div>
 
-    <p>
-    <div th:if="${#fields.hasAnyErrors()}">
-    <ul><li th:each="err: ${#fields.allErrors()}" th:text="${err}"></li></ul>
-    </div>
-    </p>
-    <p><input type="submit" value="Submit" /></p>
-</form>
+        <div class="form-group">
+            <label for="maxInv">Maximum Inventory</label>
+            <input type="number" th:field="*{maxInv}" id="maxInv" placeholder="Maximum Inventory" class="form-control mb-4 col-4" />
+            <p th:if="${#fields.hasErrors('maxInv')}" th:errors="*{maxInv}">Maximum Inventory Error</p>
+        </div>
 
-
-<table class="table table-bordered table-striped">
-    <thead class="thead-dark">
-    <h2>Available Parts</h2>
-    <tr>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Inventory</th>
-        <th>Action</th>
-    </tr>
-    </thead>
-    <form>
-    <tr th:each="tempPart : ${availparts}">
-        <td th:text="${tempPart.name}">1</td>
-        <td th:text="${tempPart.price}">1</td>
-        <td th:text="${tempPart.inv}">1</td>
-        <td><a th:href="@{/associatepart(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3">Add</a>
-        </td>
-    </tr>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-</table>
+
+    <h2>Available Parts</h2>
     <table class="table table-bordered table-striped">
-        <h2>Associated Parts</h2>
+        <thead class="thead-dark">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Inventory</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="tempPart : ${availparts}">
+            <td th:text="${tempPart.name}">Name</td>
+            <td th:text="${tempPart.price}">Price</td>
+            <td th:text="${tempPart.inv}">Inventory</td>
+            <td><a th:href="@{/associatepart(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3">Add</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2>Associated Parts</h2>
+    <table class="table table-bordered table-striped">
         <thead class="thead-dark">
         <tr>
             <th>Name</th>
@@ -62,16 +75,15 @@
         </thead>
         <tbody>
         <tr th:each="tempPart : ${assparts}">
-            <td th:text="${tempPart.name}">1</td>
-            <td th:text="${tempPart.price}">1</td>
-            <td th:text="${tempPart.inv}">1</td>
-            <td><a th:href="@{/removepart(partID=${tempPart.id})}"  class="btn btn-primary btn-sm mb-3">Remove</a>
-            </td>
+            <td th:text="${tempPart.name}">Name</td>
+            <td th:text="${tempPart.price}">Price</td>
+            <td th:text="${tempPart.inv}">Inventory</td>
+            <td><a th:href="@{/removepart(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3">Remove</a></td>
         </tr>
         </tbody>
     </table>
 
-<!--<footer><a href="http://localhost:8080/">Link-->
-<!--    to Main Screen</a></footer>-->
+    <footer><a href="http://localhost:8080/">Link to Main Screen</a></footer>
+</div>
 </body>
 </html>

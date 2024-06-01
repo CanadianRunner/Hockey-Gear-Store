@@ -118,6 +118,16 @@ This project was generated with [WGU GitLab Environment](https://gitlab.com/wgu-
 - **File** `src/main/java/com.example.demo/validators/InventoryValidator.java`
 - **Lines**: New File
 - **Change Made**: Created logic for the custom inventory validator
+- **File** `src/main/java/com.example.demo/validators/ProductInventory.java`
+- **Lines**: New File
+- **Change Made**: Created logic for the custom inventory validator
+- **File** `src/main/java/com.example.demo/validators/ValidProductInventory.java`
+- **Lines**: New File
+- **Change Made**: Created a custom annotation for inventory validation
+- **File** `src/main/java/com.example.demo/domain/Product.java`
+- **Lines**: 82-97
+- **Change Made**: Instantiated Min/Max getters and setters for products
+
 
 ### Part H Changes
 
