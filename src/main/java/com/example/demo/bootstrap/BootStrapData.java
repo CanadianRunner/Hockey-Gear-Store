@@ -70,6 +70,18 @@ public class BootStrapData implements CommandLineRunner {
             gloves.setId(4);
             helmet.setId(5);
 
+            // Setting Max and Min Inventory
+            hockeyStick.setMinInv(5);
+            hockeyStick.setMaxInv(50);
+            hockeyPuck.setMinInv(5);
+            hockeyPuck.setMaxInv(200);
+            skates.setMinInv(5);
+            skates.setMaxInv(25);
+            gloves.setMinInv(5);
+            gloves.setMaxInv(20);
+            helmet.setMinInv(5);
+            helmet.setMaxInv(30);
+
             //Saving Items in Repository
             partRepository.save(hockeyStick);
             partRepository.save(hockeyPuck);

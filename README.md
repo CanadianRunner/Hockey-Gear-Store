@@ -35,7 +35,7 @@ This project was generated with [WGU GitLab Environment](https://gitlab.com/wgu-
 - **Lines** 56-59
 - **Change Made** Added a method to controller to handle requests to the about page
 - **File** `src/main/resources/templates/about.html`
-- **Lines** 1-19
+- **Lines** New File
 - **Change Made** Created the about page with information about the store
 
 ### Part E Changes
@@ -76,21 +76,48 @@ This project was generated with [WGU GitLab Environment](https://gitlab.com/wgu-
 - **Lines** 60-71
 - **Change Made** Added the decrementInventory method to the PartServiceImpl file to handle decrementing inventory after purchase and saves the updated parts.
 - **File** `src/main/resources/templates/buyPartError.html`
-- **Lines** 1-19
+- **Lines** New File
 - **Change Made** Created error handling file for a failed purchase of a part
 - **File** `src/main/resources/templates/buyProductError.html`
-- **Lines** 1-19
+- **Lines** New File
 - **Change Made** Created error handling file for a failed purchase of a product
 - **File** `src/main/resources/templates/buyProductSuccess.html`
-- **Lines** 1-19
+- **Lines** New File
 - **Change Made** Created confirmation message file for a successful purchase of a product
 - **File** `src/main/resources/templates/buyPartSuccess.html`
-- **Lines** 1-19
+- **Lines** New File
 - **Change Made** Created confirmation message file for a successful purchase of a part
 
 ### Part G Changes
 
-#### Added logic to track maximum and minimum inventory
+#### Added logic to adapt maximum and minimum inventory for the frontend user
+- **File**`src/main/java/com.example.demo/domain/Part.java`
+- **Lines**: 1-5
+- **Change Made**: Added import statements for `ValidInventory`.
+- **Lines**: 9-10
+- **Change Made**: Added the `@ValidInventory` annotation to enforce inventory validation.
+- **Lines**: 17-25
+- **Change Made**: Added fields for `minInv` and `maxInv` with getters and setters. Added the `@NotNull` and `@Min` annotations
+- **Lines**: 67-73
+- **Change Made**: Added getters and setters for the `minInv` and `maxInv` fields
+- **File** `src/main/java/com.example.demo/bootstrap/BootStrapData.java`
+- **Lines**: 73-83
+- **Change Made**: Added Min and Max values to all the parts
+- **File**: `src/main/resources/templates/InhousePartForm.html`
+- **Lines**: 34-44
+- **Change Made**: Added input fields for `minInv` and `maxInv`
+- **File**: `src/main/resources/application.properties`
+- **Lines**: 5-6
+- **Change**: Updated the datasource URL to point to newly named database
+- **File** `src/main/java/com.example.demo/service/PartServiceImpl.java`
+- **Lines**: 52-57
+- **Change Made**: Added validation to the save method to ensure the inventory is between the `min` and `max` values
+- **File** `src/main/java/com.example.demo/validators/validInventory.java`
+- **Lines**: New File
+- **Change Made**: Created a custom annotation for inventory validation
+- **File** `src/main/java/com.example.demo/validators/InventoryValidator.java`
+- **Lines**: New File
+- **Change Made**: Created logic for the custom inventory validator
 
 ### Part H Changes
 
