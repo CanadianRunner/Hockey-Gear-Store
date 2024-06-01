@@ -2,15 +2,9 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
     <title>Sean's Hockey Gear Store</title>
 </head>
 <body>
@@ -18,12 +12,14 @@
 <div class="container">
     <h1>Sean's Hockey Gear Store</h1>
     <nav>
-        <a href="/about" class="btn btn-secondary">About Us!</a>
+        <a href="/about" class="btn btn-secondary">About Us</a>
     </nav>
     <hr>
+
     <h2>Parts</h2>
     <form th:action="@{/mainscreen}">
-        Filter: <input type="text" name="partkeyword" id="partkeyword" size="50" th:value="${partkeyword}" required />
+        <label for="partkeyword">Filter:</label>
+        <input type="text" name="partkeyword" id="partkeyword" size="50" th:value="${partkeyword}" required />
         &nbsp;
         <input type="submit" value="Search" />
         &nbsp;
@@ -43,19 +39,28 @@
         </thead>
         <tbody>
         <tr th:each="tempPart : ${parts}">
-            <td th:text="${tempPart.name}">Hockey Stick</td>
-            <td th:text="${tempPart.price}">200</td>
-            <td th:text="${tempPart.inv}">30</td>
-            <td><a th:href="@{/showPartFormForUpdate(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3">Update</a>
+            <td th:text="${tempPart.name}">1</td>
+            <td th:text="${tempPart.price}">1</td>
+            <td th:text="${tempPart.inv}">1</td>
+            <td>
+                <a th:href="@{/showPartFormForUpdate(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3">Update</a>
                 <a th:href="@{/deletepart(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3"
                    onclick="if(!(confirm('Are you sure you want to delete this part?')))return false">Delete</a>
+                <form th:action="@{/buyPart}" method="post" style="display:inline;">
+                    <input type="hidden" name="partID" th:value="${tempPart.id}"/>
+                    <button type="submit" class="btn btn-success btn-sm mb-3">Buy Now</button>
+                </form>
             </td>
         </tr>
         </tbody>
     </table>
+
+    <hr>
+
     <h2>Products</h2>
     <form th:action="@{/mainscreen}">
-        Filter: <input type="text" name="productkeyword" id="productkeyword" size="50" th:value="${productkeyword}" required />
+        <label for="productkeyword">Filter:</label>
+        <input type="text" name="productkeyword" id="productkeyword" size="50" th:value="${productkeyword}" required />
         &nbsp;
         <input type="submit" value="Search" />
         &nbsp;
@@ -82,9 +87,14 @@
             <td th:text="${tempProduct.name}">Hockey Gear Set</td>
             <td th:text="${tempProduct.price}">1200</td>
             <td th:text="${tempProduct.inv}">15</td>
-            <td><a th:href="@{/showProductFormForUpdate(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3">Update</a>
+            <td>
+                <a th:href="@{/showProductFormForUpdate(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3">Update</a>
                 <a th:href="@{/deleteproduct(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3"
                    onclick="if(!(confirm('Are you sure you want to delete this product?')))return false">Delete</a>
+                <form th:action="@{/buyProduct}" method="post" style="display:inline;">
+                    <input type="hidden" name="productID" th:value="${tempProduct.id}"/>
+                    <button type="submit" class="btn btn-success btn-sm mb-3">Buy Now</button>
+                </form>
             </td>
         </tr>
         </tbody>

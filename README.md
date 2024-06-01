@@ -10,12 +10,11 @@ This project was generated with [WGU GitLab Environment](https://gitlab.com/wgu-
 
 #### WGU Code Review 05/30/2024
 
-## Changes Made For Parts C - J
-# Need to specify the prompt, file name, line number, and change made.
+### Changes Made For Parts C - J
 
-## Part C Changes:
+### Part C Changes:
 
-### Customized HTML UI for "Sean's Hockey Gear Store"
+#### Customized HTML UI for "Sean's Hockey Gear Store
 - **File** `src/main/resources/templates/mainscreen.html`
 - **Line** 14
 - **Change Made** Updated the title tag
@@ -26,30 +25,84 @@ This project was generated with [WGU GitLab Environment](https://gitlab.com/wgu-
 - **Lines** 79-81
 - **Changes Made** Updated product name, price, and inventory
 
-#### Part D Changes
+### Part D Changes
+
+#### Added an about page and implemented its navigation
 - **File** `src/main/resources/templates/mainscreen.html`
 - **Lines** 20-22
 - **Change Made** Added navigation element to the About Page
-- **File** `src/main/java/controllers/MainScreenControllerr`
+- **File** `src/main/java/com.example.demo/controllers/MainScreenControllerr`
 - **Lines** 56-59
 - **Change Made** Added a method to controller to handle requests to the about page
 - **File** `src/main/resources/templates/about.html`
 - **Lines** 1-19
 - **Change Made** Created the about page with information about the store
 
-#### Part E Changes
+### Part E Changes
+
+#### Created sample inventory with five parts and five products
 - **File** `src/main/resources/applications.properties`
 - **Line** 7
 - **Change Made** Updated database name for testing purposes
-- **File** `src/main/java/com/example/demo/bootstrap/BootStrapData.java`
+- **File** `src/main/java/com.example.demo/bootstrap/BootStrapData.java`
 - **Lines** 36-97
 - **Changes Made** Instantiated the parts and products for the hockey shop.  The name, price, inventory, and ID's were created, along with saving these items to their respective repos.
 
-#### Part F Changes
-#### Part G Changes
-#### Part H Changes
-#### Part I Changes
-#### Part J Changes
+### Part F Changes
+
+#### Added functional Buy Now buttons to the parts and products.  Also implemented error handling
+- **File** `src/main/resources/templates/mainscreen.html`
+- **Lines** 90-93
+- **Change Made** Added a "Buy Now" button next to the update and delete buttons for products
+- **File** `src/main/resources/templates/mainscreen.html`
+- **Lines** 51-54
+- **Change Made** Added a "Buy Now" button next to the update and delete buttons for parts
+- **File** `src/main/java/com.example.demo/controllers/MainScreenControllerr`
+- **Lines** 42-52
+- **Change Made** Added a method to handle the "Buy Now" button functionality for products
+- **File** `src/main/java/com.example.demo/controllers/MainScreenControllerr`
+- **Lines** 56-54
+- **Change Made** Added a method to handle the "Buy Now" button functionality for parts
+- **File** `src/main/java/com.example.demo/service/ProductService.java`
+- **Lines** 12
+- **Change Made** Added the decrementInventory method to the ProductService file to handle decrementing inventory after purchase
+- **File** `src/main/java/com.example.demo/service/ProductServiceImpl.java`
+- **Lines** 60-71
+- **Change Made** Added the decrementInventory method to the ProductServiceImpl file to handle decrementing inventory after purchase and saves the updated products.
+- **File** `src/main/java/com.example.demo/service/PartService.java`
+- **Lines** 12
+- **Change Made** Added the decrementInventory method to the PartService file to handle decrementing inventory after purchase
+- **File** `src/main/java/com.example.demo/service/PartServiceImpl.java`
+- **Lines** 60-71
+- **Change Made** Added the decrementInventory method to the PartServiceImpl file to handle decrementing inventory after purchase and saves the updated parts.
+- **File** `src/main/resources/templates/buyPartError.html`
+- **Lines** 1-19
+- **Change Made** Created error handling file for a failed purchase of a part
+- **File** `src/main/resources/templates/buyProductError.html`
+- **Lines** 1-19
+- **Change Made** Created error handling file for a failed purchase of a product
+- **File** `src/main/resources/templates/buyProductSuccess.html`
+- **Lines** 1-19
+- **Change Made** Created confirmation message file for a successful purchase of a product
+- **File** `src/main/resources/templates/buyPartSuccess.html`
+- **Lines** 1-19
+- **Change Made** Created confirmation message file for a successful purchase of a part
+
+### Part G Changes
+
+#### Added logic to track maximum and minimum inventory
+
+### Part H Changes
+
+#### Created sample inventory with five parts and five products
+
+### Part I Changes
+
+#### Created sample inventory with five parts and five products
+
+### Part J Changes
+
+#### Created sample inventory with five parts and five products
 
 ## Technologies Used
 
