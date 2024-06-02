@@ -155,7 +155,27 @@ This project was generated with [WGU GitLab Environment](https://gitlab.com/wgu-
 - **File** `src/main/java/com/example/controllers/AddProductController.java`
 - **Lines** 51-58
 - **Change Made** Added validation to check if the inventory of associated parts falls below their minimum balance
-
+- **File** `src/main/java/com/example/controllers/AddInhousePartController.java`
+- **Lines** 28-36
+- **Change Made** Updated variable name and removed conditional logic.
+- **File** `src/main/java/com/example/demo/bootstrap/BootStrapData.java`
+- **Lines** 10-19
+- **Change Made** Removed some unused import statements and cleaned up a few formatting preferences
+- **File** `src/main/java/com/example/demo/templates/InHousePartForm.html`
+- **Lines**: 19, 46-47, 53
+- - **Change Made** Added Name error notification.  Added red error when conditions met. Updated link to styled button.
+- **File** `src/main/java/com/example/demo/templates/OutsourcedPartForm.html`
+- **Lines**: 19, 49-53, 59
+- **Change Made** Added Name error notification.  Added red error when conditions met. Updated link to styled button.
+- **File** `src/main/java/com/example/demo/domain/Part.java`
+- **Lines**: 15, 141
+- **Change Made**: Added the error message, `Inventory must be between the min and max values`.  Added new line.
+- **File** `src/main/java/com/example/demo/validators/PartInventory.java`
+- **Lines**: New File
+- **Change Made**: Created new validator class to enforce inventory limits
+- **File** `src/main/java/com/example/demo/validators/ValidPartInventory.java`
+- **Lines**: New File
+- **Change Made**: Created new annotation for validating part inventory based on their min/max
 
 ### Part I Changes
 

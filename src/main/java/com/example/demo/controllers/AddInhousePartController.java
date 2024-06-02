@@ -25,14 +25,10 @@ public class AddInhousePartController {
     }
 
     @PostMapping("/showFormAddInPart")
-    public String submitForm(@Valid @ModelAttribute("inhousepart") InhousePart part, BindingResult theBindingResult, Model theModel) {
+    public String submitForm(@Valid @ModelAttribute("inhousepart") InhousePart part, BindingResult bindingResult, Model theModel) {
         theModel.addAttribute("inhousepart", part);
-        if (theBindingResult.hasErrors()) {
+        if (bindingResult.hasErrors()) {
             return "InhousePartForm";
-        }
-        if (part.getInv() > part.getMaxInv()) {
-            theModel.addAttribute("errorMessage", "Inventory for part '" + part.getName() + "' exceeds the maximum limit of " + part.getMaxInv() + ".");
-            return "highInventoryError";
         }
         InhousePartService repo = context.getBean(InhousePartServiceImpl.class);
         InhousePart ip = repo.findById((int) part.getId());

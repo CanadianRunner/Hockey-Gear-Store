@@ -7,28 +7,20 @@ import com.example.demo.domain.Product;
 import com.example.demo.repositories.OutsourcedPartRepository;
 import com.example.demo.repositories.PartRepository;
 import com.example.demo.repositories.ProductRepository;
-import com.example.demo.service.OutsourcedPartService;
-import com.example.demo.service.OutsourcedPartServiceImpl;
-import com.example.demo.service.ProductService;
-import com.example.demo.service.ProductServiceImpl;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
-import java.util.Optional;
 
 @Component
 public class BootStrapData implements CommandLineRunner {
 
     private final PartRepository partRepository;
     private final ProductRepository productRepository;
-
     private final OutsourcedPartRepository outsourcedPartRepository;
 
     public BootStrapData(PartRepository partRepository, ProductRepository productRepository, OutsourcedPartRepository outsourcedPartRepository) {
         this.partRepository = partRepository;
         this.productRepository = productRepository;
-        this.outsourcedPartRepository=outsourcedPartRepository;
+        this.outsourcedPartRepository = outsourcedPartRepository;
     }
 
     @Override
@@ -70,7 +62,7 @@ public class BootStrapData implements CommandLineRunner {
             gloves.setId(4);
             helmet.setId(5);
 
-            // Setting Max and Min Inventory
+            //Setting Max and Min Inventory
             hockeyStick.setMinInv(5);
             hockeyStick.setMaxInv(50);
             hockeyPuck.setMinInv(5);
@@ -88,10 +80,9 @@ public class BootStrapData implements CommandLineRunner {
             partRepository.save(skates);
             partRepository.save(gloves);
             partRepository.save(helmet);
-
         }
 
-        if(productRepository.count() == 0 && outsourcedPartRepository.count() == 0 ) {
+        if (productRepository.count() == 0 && outsourcedPartRepository.count() == 0) {
 
             //Creating objects from product class
             Product youthStarterSet = new Product("Youth Hockey Set", 500, 30);
@@ -107,6 +98,9 @@ public class BootStrapData implements CommandLineRunner {
             productRepository.save(proHockeySet);
             productRepository.save(goalieSet);
         }
+    }
+}
+
 
 //        System.out.println(thePart.getCompanyName());
 //        List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
@@ -122,5 +116,3 @@ public class BootStrapData implements CommandLineRunner {
 //        System.out.println("Number of Parts"+partRepository.count());
 //        System.out.println(partRepository.findAll());
 
-    }
-}
