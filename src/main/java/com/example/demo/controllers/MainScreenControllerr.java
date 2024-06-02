@@ -1,4 +1,5 @@
 package com.example.demo.controllers;
+
 import com.example.demo.domain.Part;
 import com.example.demo.domain.Product;
 import com.example.demo.service.PartService;
@@ -9,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
 import java.util.List;
 
 @Controller
@@ -41,7 +43,7 @@ public class MainScreenControllerr {
 
     @PostMapping("/buyProduct")
     public String buyProduct(@RequestParam("productID") Long productID, Model model) {
-        boolean success = productService.decrementInventory(productID);
+        boolean success = productService.purchaseProduct(productID);
         if (success) {
             model.addAttribute("message", "Purchase successful!");
             return "buyProductSuccess";

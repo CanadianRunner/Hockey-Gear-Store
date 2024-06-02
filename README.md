@@ -118,6 +118,13 @@ This project was generated with [WGU GitLab Environment](https://gitlab.com/wgu-
 - **File** `src/main/java/com.example.demo/validators/InventoryValidator.java`
 - **Lines**: New File
 - **Change Made**: Created logic for the custom inventory validator
+- **File** `src/main/java/com.example.demo/templates/productForm.html`
+- **Lines**: 14-20, 22-28, 30-36
+- **Change Made**: Added descriptors next to text boxes for easier updating/navigation
+- **File** `src/main/java/com.example.demo/templates/productForm.html`
+- **Lines**: 74-75
+- **Change Made**: Uncommented navigation to main screen for intuitive workflow
+
 
 ### Part H Changes
 

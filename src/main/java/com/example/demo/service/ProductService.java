@@ -10,5 +10,6 @@ public interface ProductService {
     public void deleteById(int theId);
     public List<Product> listAll(String keyword);
     boolean decrementInventory(Long id);
+    public boolean purchaseProduct(Long id);
 
 }
