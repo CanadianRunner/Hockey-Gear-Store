@@ -124,6 +124,12 @@ This project was generated with [WGU GitLab Environment](https://gitlab.com/wgu-
 - **File** `src/main/java/com.example.demo/templates/productForm.html`
 - **Lines**: 74-75
 - **Change Made**: Uncommented navigation to main screen for intuitive workflow
+- **File** `src/main/java/com.example.demo/templates/OutsourcedPartForm.html`
+- **Lines**: 14-51
+- **Change Made**: Added labels and inputs for the minInv and maxInv
+- **File** `src/main/java/com.example.demo/templates/OutsourcedPartForm.html`
+- **Lines**: 14-51
+- **Change Made**: Added labels and inputs for the minInv and maxInv
 
 
 ### Part H Changes
