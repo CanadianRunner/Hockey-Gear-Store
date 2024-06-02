@@ -130,11 +130,32 @@ This project was generated with [WGU GitLab Environment](https://gitlab.com/wgu-
 - **File** `src/main/java/com.example.demo/templates/OutsourcedPartForm.html`
 - **Lines**: 14-51
 - **Change Made**: Added labels and inputs for the minInv and maxInv
-
+- **File** `src/main/resources/templates/about.html`
+- **Lines** 15
+- **Change Made** Added navigation to main screen to match the rest of the application
 
 ### Part H Changes
 
-#### Created sample inventory with five parts and five products
+#### Added validation and error handling for min and max fields
+- **File** `src/main/resources/templates/productForm.html`
+- **Lines** 23-31, 35-44
+- **Change Made** Added columns for the min and max inventories for the available parts and associated parts tables
+- **File** `src/main/java/com/example/demo/controllers/AddProductController.java`
+- **Lines** 39-52
+- **Change Made** Added validation logic to check if updating a product would cause associated parts to fall below the set minimum inventory
+- **File** `src/main/resources/templates/lowInventoryError.html`
+- **Lines** New File
+- **Change Made** Created new HTML file to display an error message when the inventory update would fall outside the minimum inventory
+- **File** `src/main/java/com/example/demo/service/PartServiceImpl.java`
+- **Lines** 45-50
+- **Change Made** Added validation logic to the inventory part selected is between the `min/max` parameters
+- **File** `src/main/java/com/example/demo/service/PartService.java`
+- **Lines** 10-15
+- **Change Made** Updated the interface to reflect the changes in the `save` method
+- **File** `src/main/java/com/example/controllers/AddProductController.java`
+- **Lines** 51-58
+- **Change Made** Added validation to check if the inventory of associated parts falls below their minimum balance
+
 
 ### Part I Changes
 

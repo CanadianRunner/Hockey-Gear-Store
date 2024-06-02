@@ -40,6 +40,9 @@ public class PartServiceImpl implements PartService {
 
     @Override
     public void save(Part thePart) {
+        if (thePart.getInv() < thePart.getMinInv() || thePart.getInv() > thePart.getMaxInv()) {
+            throw new RuntimeException("Inventory must be between minimum and maximum values.");
+        }
         partRepository.save(thePart);
     }
 

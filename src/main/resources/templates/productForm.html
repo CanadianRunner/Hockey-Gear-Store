@@ -40,6 +40,8 @@
         <th>Name</th>
         <th>Price</th>
         <th>Inventory</th>
+        <th>Min</th>
+        <th>Max</th>
         <th>Action</th>
     </tr>
     </thead>
@@ -48,10 +50,13 @@
             <td th:text="${tempPart.name}">1</td>
             <td th:text="${tempPart.price}">1</td>
             <td th:text="${tempPart.inv}">1</td>
+            <td th:text="${tempPart.minInv}">1</td>
+            <td th:text="${tempPart.maxInv}">1</td>
             <td><a th:href="@{/associatepart(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3">Add</a></td>
         </tr>
     </form>
 </table>
+
 <table class="table table-bordered table-striped">
     <h2>Associated Parts</h2>
     <thead class="thead-dark">
@@ -59,6 +64,8 @@
         <th>Name</th>
         <th>Price</th>
         <th>Inventory</th>
+        <th>Min</th>
+        <th>Max</th>
         <th>Action</th>
     </tr>
     </thead>
@@ -67,10 +74,13 @@
         <td th:text="${tempPart.name}">1</td>
         <td th:text="${tempPart.price}">1</td>
         <td th:text="${tempPart.inv}">1</td>
+        <td th:text="${tempPart.minInv}">1</td>
+        <td th:text="${tempPart.maxInv}">1</td>
         <td><a th:href="@{/removepart(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3">Remove</a></td>
     </tr>
     </tbody>
 </table>
+
 <footer><a href="http://localhost:8080/">Link
     to Main Screen</a></footer>
 </body>
