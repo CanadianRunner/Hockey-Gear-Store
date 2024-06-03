@@ -179,7 +179,14 @@ This project was generated with [WGU GitLab Environment](https://gitlab.com/wgu-
 
 ### Part I Changes
 
-#### Created sample inventory with five parts and five products
+#### Added unit tests for min/max inventory
+- **File** `src/main/test/java/com.example.demo/domain/PartTest.java`
+- **Lines**: 160-194
+- **Change Made**: Testing Max: Tests tha max inventory is correctly retrieved.
+- Testing Max: Tests the max inventory is correctly set.
+- Testing Min: Tests the min inventory is correctly retrieved.
+- Testing Min: Tests the min inventory is correctly set.
+- Verified all added tests are passing.
 
 ### Part J Changes
 
