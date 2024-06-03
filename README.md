@@ -8,7 +8,7 @@ This project was generated with [WGU GitLab Environment](https://gitlab.com/wgu-
 
 #### By _**Sean Keane**_
 
-#### WGU Code Review 05/30/2024
+#### WGU Code Review 06/02/2024
 
 ### Changes Made For Parts C - J
 
@@ -190,16 +190,99 @@ This project was generated with [WGU GitLab Environment](https://gitlab.com/wgu-
 
 ### Part J Changes
 
-#### Created sample inventory with five parts and five products
+#### Removed class files and cleaned up solution
+- **File** `src/main/java/com/example/demo/validators/DeletePartValidator.java`
+- **Lines** Deleted File
+- **Change Made** Removed file as it was unused
+- **File** `src/main/java/resources/templates/about.html`
+- **Lines** 15
+- **Change Made** Updated home button
+- **File** `src/main/java/com/example/demo/controllers/AddPartController.java`
+- **Lines** New File
+- **Change Made** Created new HTML file to display an error message when the inventory update would fall outside the minimum inventory
+- **File** `src/main/java/com/example/demo/service/PartServiceImpl.java`
+- **Lines** 36-39
+- **Change Made** Added a break within the loop if conditions are met and changed formatting
+- **File** `src/main/java/com/example/demo/controllers/AddProductController.java`
+- **Lines** 2, 23
+- **Change Made** Added line back for standard formatting and final for best practices to the PartService
+- **File** `src/main/java/com/example/demo/validators/DeletePartValidator.java`
+- **Lines** Deleted File
+- **Change Made** Removed file as it was not in use
+- **File** `src/main/java/com/example/demo/bootstrap/BootStrapData.java`
+- **Lines** 4, 103-118
+- **Change Made** Removed unused import.  Removed comments at bottom of file.
+- **File** `src/main/java/com/example/demo/validators/EnufPartsValidator.java`
+- **Lines** 4, 13-18
+- **Change Made** Removed comments 
+- **File** `src/main/java/com/example/demo/validators/InhousePart.java`
+- **Lines** 4, 6-11
+- **Change Made** Removed comments
+- **File** `src/resources/templates/InhousePartForm.html`
+- **Lines** 53
+- **Change Made** Updated home button to match rest of site
+- **File** `src/main/java/com/example/demo/service/InhousePartService.java`
+- **Lines** 4-5, 8-11
+- **Change Made** Removed unused imports. Removed comments.
+- **File** `src/main/java/com/example/demo/service/InhousePartServiceImpl.java`
+- **Lines** 4, 6, 13-18
+- **Change Made** Removed unused import.  Removed unused import. Removed comments.
+- **File** `src/main/java/com/example/demo/validators/InventoryValidator.java`
+- **Lines** 4
+- **Change Made** Removed unused import.
+- **File** `src/main/java/com/example/demo/repositories/OutsourcedPartRepository.java`
+- **Lines** 6-11
+- **Change Made** Removed comments.
+- **File** `src/main/java/com/example/demo/service/OutsourcedPartService.java`
+- **Lines** 4, 8-13
+- **Change Made** Removed unused import. Removed comments.
+- **File** `src/main/java/com/example/demo/service/OutsourcedPartServiceImpl.java`
+- **Lines** 13
+- **Change Made** Added final for best practices to declaration
+- **File** `src/main/java/com/example/demo/domain/Part.java`
+- **Lines** 14
+- **Change Made** Removed unused class
+- **File** `src/main/java/com/example/demo/validators/PartInventory.java`
+- **Lines** 15-18
+- **Change Made** Tidied up logic to a single line
+- **File** `src/main/java/com/example/demo/repositories/PartRepository.java`
+- **Lines** 4, 10-15
+- **Change Made** Removed unused import.  Removed comments.
+- **File** `src/main/java/com/example/demo/service/PartService.java`
+- **Lines** 3
+- **Change Made** Removed unused import.
+- **File** `src/main/java/com/example/demo/validators/PriceProductValidator.java`
+- **Lines** 5-7, 16-21, 42-46
+- **Change Made** Removed unused import. Removed comments.  Cleaned up redundant logic.
+- **File** `src/main/java/com/example/demo/domain/Product.java`
+- **Lines** 12-17
+- **Change Made** Removed comments.
+- **File** `src/main/resources/templates/productForm.html`
+- **Lines** 84
+- **Change Made** Updated button to match rest of site.
+- **File** `src/main/java/com/example/demo/repositories/ProductRepository.java`
+- **Lines** 9-14, 11
+- **Change Made** Removed comments.  Removed public declaration as its implicit.
+- **File** `src/main/java/com/example/demo/service/ProductService.java`
+- **Lines** 6-12
+- **Change Made** Removed public declarations as their implicit.
+- **File** `src/main/java/com/example/demo/service/ProductService.java`
+- **Lines** 6-12
+- **Change Made** Removed public declarations as their implicit.
+- **File** `src/main/java/com/example/demo/validators/ValidDeletePart.java`
+- **Lines** Deleted File
+- **Change Made** Removed file as it was unused.
+- **File** `src/main/java/com/example/demo/validators/ValidProductPrice.java`
+- **Lines** 10-15
+- **Change Made** Removed comments
 
 ## Technologies Used
 
 * HTML
-* CSS
 * Java
 
 ## Description
-_This is a project I created for my B.S. in Software Engineering that takes an SVG of a world map and displays relevant information based on user clicks.  It is a single page application with the map centered on the page.   Clicking on a country will display the Name, Capital, Region, Income Level, Lending Type, and Coordinates.  Developing this application helped me grow my understanding of TypeScript, Angular, HTML, and CSS._
+_This is a project I created for my B.S. in Software Engineering that manages inventory for my fictional hockey gear store.  It breaks down inventory into two sections, part and products.  Products are a configurable parts bundles.  The user is able to buy products/parts, delete products/parts, and update products/parts.  Developing this application helped me grow my understanding of Java and HTML_
 
 
 ## Setup/Installation Requirements
@@ -209,9 +292,6 @@ _This is a project I created for my B.S. in Software Engineering that takes an S
 3) Run the project by clicking the play button.  This is next to 'DemoApplication' in the top right of the IDE.
 4) Open your browser of choice and navigate to `http://localhost:8080/mainscreen`.
 
-## Project can be found at:
-https://github.com/CanadianRunner/World-Map
-
 ## Known Bugs
 
 * No known bugs.
@@ -219,14 +299,6 @@ https://github.com/CanadianRunner/World-Map
 ## License
 
 If you have any questions or concerns, feel free to contact me at code@sean-keane.com
-
-## SVG World Map Used:
-
-* https://en.m.wikipedia.org/wiki/File:BlankMap-World.svg
-
-## API Used for facts about each country
-
-* https://datahelpdesk.worldbank.org/knowledgebase/articles/898590-country-api-queries
 
 *This is licensed under the MIT license*
 

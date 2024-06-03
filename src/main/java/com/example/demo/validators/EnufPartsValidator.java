@@ -10,12 +10,6 @@ import org.springframework.context.ApplicationContext;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-/**
- *
- *
- *
- *
- */
 public class EnufPartsValidator implements ConstraintValidator<ValidEnufParts, Product> {
     @Autowired
     private ApplicationContext context;

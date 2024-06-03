@@ -12,9 +12,6 @@ public class PartInventoryValidator implements ConstraintValidator<ValidPartInve
 
     @Override
     public boolean isValid(Part part, ConstraintValidatorContext context) {
-        if (part.getInv() < part.getMinInv() || part.getInv() > part.getMaxInv()) {
-            return false;
-        }
-        return true;
+        return part.getInv() >= part.getMinInv() && part.getInv() <= part.getMaxInv();
     }
 }

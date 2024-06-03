@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Service
 public class OutsourcedPartServiceImpl implements OutsourcedPartService{
-    private OutsourcedPartRepository partRepository;
+    private final OutsourcedPartRepository partRepository;
 
     @Autowired
     public OutsourcedPartServiceImpl(OutsourcedPartRepository partRepository) {

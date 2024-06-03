@@ -33,7 +33,10 @@ public class AddPartController {
         boolean inhouse = true;
         List<OutsourcedPart> outsourcedParts = outsourcedrepo.findAll();
         for (OutsourcedPart outsourcedPart : outsourcedParts) {
-            if (outsourcedPart.getId() == theId) inhouse = false;
+            if (outsourcedPart.getId() == theId) {
+                inhouse = false;
+                break;
+            }
         }
         String formtype;
         if (inhouse) {

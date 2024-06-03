@@ -1,7 +1,6 @@
 package com.example.demo.bootstrap;
 
 import com.example.demo.domain.InhousePart;
-import com.example.demo.domain.OutsourcedPart;
 import com.example.demo.domain.Part;
 import com.example.demo.domain.Product;
 import com.example.demo.repositories.OutsourcedPartRepository;
@@ -100,19 +99,3 @@ public class BootStrapData implements CommandLineRunner {
         }
     }
 }
-
-
-//        System.out.println(thePart.getCompanyName());
-//        List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
-//        for(OutsourcedPart part:outsourcedParts){
-//            System.out.println(part.getName()+" "+part.getCompanyName());
-//        }
-//
-//
-//
-//        System.out.println("Started in Bootstrap");
-//        System.out.println("Number of Products"+productRepository.count());
-//        System.out.println(productRepository.findAll());
-//        System.out.println("Number of Parts"+partRepository.count());
-//        System.out.println(partRepository.findAll());
-

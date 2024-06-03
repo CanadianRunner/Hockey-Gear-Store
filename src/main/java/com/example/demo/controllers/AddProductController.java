@@ -1,4 +1,5 @@
 package com.example.demo.controllers;
+
 import com.example.demo.domain.Part;
 import com.example.demo.domain.Product;
 import com.example.demo.service.PartService;
@@ -19,7 +20,7 @@ import java.util.List;
 public class AddProductController {
     @Autowired
     private ApplicationContext context;
-    private PartService partService;
+    private final PartService partService;
     private List<Part> theParts;
     private static Product product1;
     private Product product;
