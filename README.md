@@ -1,4 +1,4 @@
-# Seans Hockey Store
+# Seans Hockey Gear Store
 
 This MVP website was built to provided specifications for my college course D287.
 
@@ -7,10 +7,12 @@ This MVP website was built to provided specifications for my college course D287
 This project was generated with [WGU GitLab Environment](https://gitlab.com/wgu-gitlab-environment/students/d287-java-frameworks/-/jobs/6984048303)
 
 #### By _**Sean Keane**_
-
 #### WGU Code Review 06/02/2024
 
-### Changes Made For Parts C - J
+### Built Application
+![BuiltApp](BuiltApp.png)
+
+## Changes Made For Parts C - J
 
 ### Part C Changes:
 
