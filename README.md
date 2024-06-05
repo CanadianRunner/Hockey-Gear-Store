@@ -12,6 +12,22 @@ This project was generated with [WGU GitLab Environment](https://gitlab.com/wgu-
 ### Built Application
 ![BuiltApp](BuiltApp.png)
 
+## Technologies Used
+
+* HTML
+* Java
+
+## Description
+_This is a project I created for my B.S. in Software Engineering that manages inventory for my fictional hockey gear store.  It breaks down inventory into two sections: parts and products.  Products are configurable parts bundles.  The user can buy products/parts, delete products/parts, and update products/parts.  Developing this application helped me grow my understanding of Java and HTML_
+
+
+## Setup/Installation Requirements
+
+1) Clone this repository to your desktop.
+2) Navigate to the now installed directory and open in your editor of choice.
+3) Run the project by clicking the play button.  This is next to 'DemoApplication' in the top right of the IDE.
+4) Open your browser of choice and navigate to `http://localhost:8080/mainscreen`.
+
 ## Changes Made For Parts C - J
 
 ### Part C Changes:
@@ -165,7 +181,7 @@ This project was generated with [WGU GitLab Environment](https://gitlab.com/wgu-
 - **Change Made** Removed some unused import statements and cleaned up a few formatting preferences
 - **File** `src/main/java/com/example/demo/templates/InHousePartForm.html`
 - **Lines**: 19, 46-47, 53
-- - **Change Made** Added Name error notification.  Added red error when conditions met. Updated link to styled button.
+- **Change Made** Added Name error notification.  Added red error when conditions met. Updated link to styled button.
 - **File** `src/main/java/com/example/demo/templates/OutsourcedPartForm.html`
 - **Lines**: 19, 49-53, 59
 - **Change Made** Added Name error notification.  Added red error when conditions met. Updated link to styled button.
@@ -277,22 +293,6 @@ This project was generated with [WGU GitLab Environment](https://gitlab.com/wgu-
 - **File** `src/main/java/com/example/demo/validators/ValidProductPrice.java`
 - **Lines** 10-15
 - **Change Made** Removed comments
-
-## Technologies Used
-
-* HTML
-* Java
-
-## Description
-_This is a project I created for my B.S. in Software Engineering that manages inventory for my fictional hockey gear store.  It breaks down inventory into two sections, part and products.  Products are a configurable parts bundles.  The user is able to buy products/parts, delete products/parts, and update products/parts.  Developing this application helped me grow my understanding of Java and HTML_
-
-
-## Setup/Installation Requirements
-
-1) Clone this repository to your desktop.
-2) Navigate to the now installed directory and open in your editor of choice.
-3) Run the project by clicking the play button.  This is next to 'DemoApplication' in the top right of the IDE.
-4) Open your browser of choice and navigate to `http://localhost:8080/mainscreen`.
 
 ## Known Bugs
 
